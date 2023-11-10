@@ -1,13 +1,13 @@
 #include <Novice.h>
 
-const char kWindowTitle[] = "LE2B_20_ツミタ_ヒナタ_";
+const char kWindowTitle[] = "PG3_03_01";
 
 // Windowsアプリでのエントリーポイント(main関数)
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	// ライブラリの初期化
-	const int ScreenWidth = 1280;
-	const int ScreenHeight = 720;
+	const int ScreenWidth = 500;
+	const int ScreenHeight = 500;
 	Novice::Initialize(kWindowTitle, ScreenWidth, ScreenHeight);
 
 	// キー入力結果を受け取る箱
