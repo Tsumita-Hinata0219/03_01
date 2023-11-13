@@ -1,5 +1,9 @@
 #include <Novice.h>
 
+#include "Utility/InputManager/InputManager.h"
+#include "GameObject/Player/Player.h"
+
+
 const char kWindowTitle[] = "PG3_03_01";
 
 // Windowsアプリでのエントリーポイント(main関数)
@@ -10,22 +14,23 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	const int ScreenHeight = 500;
 	Novice::Initialize(kWindowTitle, ScreenWidth, ScreenHeight);
 
-	// キー入力結果を受け取る箱
-	char keys[256] = {0};
-	char preKeys[256] = {0};
+
+	// 初期化処理
+	Player::Initialize();
+
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
 		// フレームの開始
 		Novice::BeginFrame();
+		InputManager::BeginFlame();
 
-		// キー入力を受け取る
-		memcpy(preKeys, keys, 256);
-		Novice::GetHitKeyStateAll(keys);
-
+		
 		///
 		/// ↓更新処理ここから
 		///
+
+		Player::Update();
 
 		///
 		/// ↑更新処理ここまで
@@ -35,6 +40,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓描画処理ここから
 		///
 
+		Player::Draw();
+
 		///
 		/// ↑描画処理ここまで
 		///
@@ -43,7 +50,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		Novice::EndFrame();
 
 		// ESCキーが押されたらループを抜ける
-		if (preKeys[DIK_ESCAPE] == 0 && keys[DIK_ESCAPE] != 0) {
+		if (InputManager::KeysPress(DIK_ESCAPE)) {
 			break;
 		}
 	}

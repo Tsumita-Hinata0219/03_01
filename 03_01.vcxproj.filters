@@ -20,6 +20,12 @@
     <Filter Include="GameObject\Player">
       <UniqueIdentifier>{a235eb30-7eab-4a37-ae85-d7eb55ed946e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{fed816f8-31b1-448d-8392-264bf4e92d67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\InputManager">
+      <UniqueIdentifier>{d5527490-a9b5-4e60-929a-f465bca0e9eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -43,6 +49,9 @@
     </ClCompile>
     <ClCompile Include="GameObject\Player\Player.cpp">
       <Filter>GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\InputManager\InputManager.cpp">
+      <Filter>Utility\InputManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +125,9 @@
     <ClInclude Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.h" />
     <ClInclude Include="GameObject\Player\Player.h">
       <Filter>GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\InputManager\InputManager.h">
+      <Filter>Utility\InputManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
