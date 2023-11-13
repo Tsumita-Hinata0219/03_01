@@ -1,9 +1,11 @@
 #pragma once
 
 #include "Utility/InputManager/InputManager.h"
+#include "GameObject/Bullet/Bullet.h"
 
 #include <Novice.h>
 #include <Vector2.h>
+#include <list>
 
 
 
@@ -40,6 +42,15 @@ private:
 	/// </summary>
 	void Move();
 
+	/// <summary>
+	/// 射撃処理
+	/// </summary>
+	void Shot();
+
+	/// <summary>
+	/// デスフラグの立った球を削除
+	/// </summary>
+	void DeleteBullet();
 
 private:
 
@@ -51,5 +62,11 @@ private:
 
 	// 速度
 	Vector2 velocity_;
+
+	// バレット
+	std::list<Bullet*> bullets_;
+
+	// 弾速
+	float bulVelocity_;
 
 };

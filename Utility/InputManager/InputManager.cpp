@@ -29,7 +29,7 @@ void InputManager::BeginFlame()
 /// </summary>
 bool InputManager::KeysPress(uint32_t preKeys)
 {
-	if (InputManager::GetInstance()->keys[preKeys] == 0 && InputManager::GetInstance()->preKeys[preKeys] != 0)
+	if (InputManager::GetInstance()->preKeys[preKeys] == 0 && InputManager::GetInstance()->keys[preKeys] != 0)
 	{
 		return true;
 	}
@@ -43,7 +43,7 @@ bool InputManager::KeysPress(uint32_t preKeys)
 /// </summary>
 bool InputManager::Keys(uint32_t key)
 {
-	if (InputManager::GetInstance()->keys[key] == 0x80)
+	if (InputManager::GetInstance()->keys[key] != 0)
 	{
 		return true;
 	}
