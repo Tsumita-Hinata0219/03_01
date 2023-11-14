@@ -18,9 +18,12 @@ Enemy* Enemy::GetInstance() {
 void Enemy::Initialize() {
 
 	Enemy::GetInstance()->position_ = { 250.0f, 100.0f };
-	Enemy::GetInstance()->velocity_ = { 8.0f, 8.0f };
+	Enemy::GetInstance()->velocity_ = { 3.0f, 3.0f };
 	Enemy::GetInstance()->size_ = 30.0f;
 	Enemy::GetInstance()->bulVelocity_ = 11.0f;
+	Enemy::GetInstance()->isDead_ = false;
+	Enemy::GetInstance()->reswawnTimer_ = 0;
+	Enemy::GetInstance()->state_ = new IEnemyAliveState();
 }
 
 
@@ -30,8 +33,7 @@ void Enemy::Initialize() {
 /// </summary>
 void Enemy::Update() {
 
-	// 移動処理
-	Enemy::GetInstance()->Move();
+	Enemy::GetInstance()->state_->Update(Enemy::GetInstance());
 }
 
 
@@ -44,17 +46,26 @@ void Enemy::Draw() {
 	Vector2 pos = Enemy::GetInstance()->position_;
 	float size = Enemy::GetInstance()->size_;
 
-	// プレイヤーの描画
-	Novice::DrawTriangle(
-		int(pos.x), int(pos.y),
-		int(pos.x - size), int(pos.y - size),
-		int(pos.x + size), int(pos.y - size),
-		RED, kFillModeSolid);
+	if (Enemy::GetInstance()->isDead_ != true) {
 
+		// プレイヤーの描画
+		Novice::DrawTriangle(
+			int(pos.x), int(pos.y),
+			int(pos.x - size), int(pos.y - size),
+			int(pos.x + size), int(pos.y - size),
+			RED, kFillModeSolid);
+	}
 }
 
+
+
+/// <summary>
+/// 衝突時判定
+/// </summary>
 void Enemy::onCollision() {
 
+	Enemy::GetInstance()->isDead_ = true;
+	Enemy::GetInstance()->reswawnTimer_ = 180;
 }
 
 
@@ -83,3 +94,31 @@ void Enemy::Move() {
 }
 
 
+
+/// <summary>
+/// リスポーン処理
+/// </summary>
+bool Enemy::Respawn() {
+
+	Enemy::GetInstance()->reswawnTimer_--;
+	
+
+	if (Enemy::GetInstance()->reswawnTimer_ <= 0) {
+
+		Enemy::GetInstance()->isDead_ = false;
+		Enemy::GetInstance()->reswawnTimer_ = 0;
+		return true;
+	}
+	
+	return false;
+}
+
+
+
+/// <summary>
+/// ステートの変更
+/// </summary>
+void Enemy::ChangeState(IEnemyState* newState) {
+
+	state_ = newState;
+}

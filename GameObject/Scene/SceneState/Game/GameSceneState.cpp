@@ -21,7 +21,10 @@ void GameSceneState::Update() {
 
 	Player::Update();
 	Enemy::Update();
-	CheckCollision();
+
+	if (Enemy::GetInstance()->GetIsDead() != true) {
+		CheckCollision();
+	}
 
 	if (InputManager::KeysPress(DIK_N)) {
 		sceneNo_ = RESULT;

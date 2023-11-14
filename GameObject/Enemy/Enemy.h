@@ -1,10 +1,15 @@
 #pragma once
 
 #include "Utility/InputManager/InputManager.h"
+#include "GameObject/Enemy/IEnemyState.h"
+#include "GameObject/Enemy/State/IEnemyAliveState.h"
+#include"GameObject/Enemy/State/IEnemyDeadState.h"
 
 #include <Novice.h>
 #include <Vector2.h>
 #include <list>
+
+#include "imgui.h"
 
 
 
@@ -34,25 +39,38 @@ public:
 	static void Draw();
 
 	/// <summary>
+	/// 移動処理
+	/// </summary>
+	void Move();
+
+	/// <summary>
+	/// リスポーン処理
+	/// </summary>
+	bool Respawn();
+
+	/// <summary>
+	/// ステートの変更
+	/// </summary>
+	void ChangeState(IEnemyState* newState);
+
+	/// <summary>
 	/// 衝突時判定
 	/// </summary>
 	static void onCollision();
 
 	/// <summary>
-	/// 座標の取得
+	/// 取得
 	/// </summary>
 	Vector2 GetPosition() { return Enemy::GetInstance()->position_; }
-
-	
+	Vector2 GetVelocity() { return Enemy::GetInstance()->velocity_; }
 	float GetRadius() { return Enemy::GetInstance()->size_; }
-
-
-private:
+	bool GetIsDead() { return Enemy::GetInstance()->isDead_; }
 
 	/// <summary>
-	/// 移動処理
+	/// 設定
 	/// </summary>
-	void Move();
+	void SetPosition(Vector2 pos) { Enemy::GetInstance()->position_ = pos; }
+	void SetVelocity(Vector2 vel) { Enemy::GetInstance()->velocity_ = vel; }
 
 
 private:
@@ -69,4 +87,12 @@ private:
 	// 弾速
 	float bulVelocity_;
 
+	// 死亡フラグ
+	bool isDead_;
+
+	// リスポーンタイマー
+	int reswawnTimer_;
+
+	// ステートパターン
+	IEnemyState* state_;
 };

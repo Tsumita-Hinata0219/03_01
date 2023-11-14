@@ -110,6 +110,8 @@
     <ClCompile Include="GameObject\BackGround\BackGround.cpp" />
     <ClCompile Include="GameObject\Bullet\Bullet.cpp" />
     <ClCompile Include="GameObject\Enemy\Enemy.cpp" />
+    <ClCompile Include="GameObject\Enemy\State\IEnemyAliveState.cpp" />
+    <ClCompile Include="GameObject\Enemy\State\IEnemyDeadState.cpp" />
     <ClCompile Include="GameObject\Player\Player.cpp" />
     <ClCompile Include="GameObject\Scene\IScene.cpp" />
     <ClCompile Include="GameObject\Scene\SceneState\Game\GameSceneState.cpp" />
@@ -150,6 +152,8 @@
     <ClInclude Include="GameObject\Bullet\Bullet.h" />
     <ClInclude Include="GameObject\Enemy\Enemy.h" />
     <ClInclude Include="GameObject\Enemy\IEnemyState.h" />
+    <ClInclude Include="GameObject\Enemy\State\IEnemyAliveState.h" />
+    <ClInclude Include="GameObject\Enemy\State\IEnemyDeadState.h" />
     <ClInclude Include="GameObject\Player\Player.h" />
     <ClInclude Include="GameObject\Scene\IScene.h" />
     <ClInclude Include="GameObject\Scene\SceneState\Game\GameSceneState.h" />

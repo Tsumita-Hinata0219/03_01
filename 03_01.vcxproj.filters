@@ -53,6 +53,9 @@
     <Filter Include="GameObject\BackGround">
       <UniqueIdentifier>{e113b2fb-e4b2-4344-a17d-d92b805987c7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Enemy\State">
+      <UniqueIdentifier>{79ef4f79-83af-4b7b-849f-f7290541817c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -103,6 +106,12 @@
     </ClCompile>
     <ClCompile Include="GameObject\Scene\IScene.cpp">
       <Filter>GameObject\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Enemy\State\IEnemyAliveState.cpp">
+      <Filter>GameObject\Enemy\State</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Enemy\State\IEnemyDeadState.cpp">
+      <Filter>GameObject\Enemy\State</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -206,6 +215,12 @@
     </ClInclude>
     <ClInclude Include="GameObject\Enemy\IEnemyState.h">
       <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Enemy\State\IEnemyAliveState.h">
+      <Filter>GameObject\Enemy\State</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Enemy\State\IEnemyDeadState.h">
+      <Filter>GameObject\Enemy\State</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
