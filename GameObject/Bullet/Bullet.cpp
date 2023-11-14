@@ -38,7 +38,7 @@ void Bullet::Draw() {
 	Novice::DrawEllipse(
 		int(position_.x), int(position_.y),
 		int(radius_), int(radius_),
-		0.0f, BLUE, kFillModeSolid);
+		0.0f, BLACK, kFillModeSolid);
 }
 
 

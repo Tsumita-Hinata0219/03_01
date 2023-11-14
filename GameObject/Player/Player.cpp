@@ -61,7 +61,7 @@ void Player::Draw() {
 		int(pos.x), int(pos.y),
 		int(pos.x - size), int(pos.y + size),
 		int(pos.x + size), int(pos.y + size),
-		GREEN, kFillModeSolid);
+		BLUE, kFillModeSolid);
 
 	// バレットの描画
 	for (Bullet* bul : Player::GetInstance()->bullets_) {

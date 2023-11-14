@@ -84,9 +84,6 @@ private:
 	// 速度
 	Vector2 velocity_;
 
-	// 弾速
-	float bulVelocity_;
-
 	// 死亡フラグ
 	bool isDead_;
 

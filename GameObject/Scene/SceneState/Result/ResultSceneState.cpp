@@ -30,5 +30,5 @@ void ResultSceneState::Update() {
 /// </summary>
 void ResultSceneState::Draw() {
 
-	BackGround::DrawResult();
+	BackGround::Draw(2);
 }

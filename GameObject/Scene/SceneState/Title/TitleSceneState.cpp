@@ -31,5 +31,5 @@ void TitleSceneState::Update() {
 /// </summary>
 void TitleSceneState::Draw() {
 
-	BackGround::DrawTitle();
+	BackGround::Draw(0);
 }

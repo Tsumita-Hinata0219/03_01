@@ -20,7 +20,6 @@ void Enemy::Initialize() {
 	Enemy::GetInstance()->position_ = { 250.0f, 100.0f };
 	Enemy::GetInstance()->velocity_ = { 3.0f, 3.0f };
 	Enemy::GetInstance()->size_ = 30.0f;
-	Enemy::GetInstance()->bulVelocity_ = 11.0f;
 	Enemy::GetInstance()->isDead_ = false;
 	Enemy::GetInstance()->reswawnTimer_ = 0;
 	Enemy::GetInstance()->state_ = new IEnemyAliveState();
@@ -49,11 +48,10 @@ void Enemy::Draw() {
 	if (Enemy::GetInstance()->isDead_ != true) {
 
 		// プレイヤーの描画
-		Novice::DrawTriangle(
+		Novice::DrawEllipse(
 			int(pos.x), int(pos.y),
-			int(pos.x - size), int(pos.y - size),
-			int(pos.x + size), int(pos.y - size),
-			RED, kFillModeSolid);
+			int(size), int(size),
+			0.0f, RED, kFillModeSolid);
 	}
 }
 

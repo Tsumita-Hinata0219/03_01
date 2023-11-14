@@ -38,7 +38,7 @@ void GameSceneState::Update() {
 /// </summary>
 void GameSceneState::Draw() {
 
-	BackGround::DrawGame();
+	BackGround::Draw(1);
 
 	Player::Draw();
 	Enemy::Draw();
@@ -58,13 +58,12 @@ void GameSceneState::CheckCollision() {
 	for (Bullet* bullet : bullets) {
 
 		posA = bullet->GetPosition();
-		posA.y += 5.0f;
 
 		float distAB =
 			(posB.x - posA.x) * (posB.x - posA.x) +
 			(posB.y - posA.y) * (posB.y - posA.y);
 
-		float radiusAB = (bullet->GetRadius() + Enemy::GetInstance()->GetRadius() + 5.0f);
+		float radiusAB = (bullet->GetRadius() + Enemy::GetInstance()->GetRadius());
 
   		if (distAB <= radiusAB) {
 
