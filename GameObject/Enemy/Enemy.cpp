@@ -53,7 +53,6 @@ void Enemy::Draw() {
 
 }
 
-
 void Enemy::onCollision() {
 
 }

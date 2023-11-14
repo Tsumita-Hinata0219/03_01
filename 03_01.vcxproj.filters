@@ -204,5 +204,8 @@
     <ClInclude Include="GameObject\BackGround\BackGround.h">
       <Filter>GameObject\BackGround</Filter>
     </ClInclude>
+    <ClInclude Include="GameObject\Enemy\IEnemyState.h">
+      <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
