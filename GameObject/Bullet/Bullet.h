@@ -26,6 +26,11 @@ public:
 	/// </summary>
 	void Draw();
 
+	/// <summary>
+	/// 衝突時判定
+	/// </summary>
+	void onCollision();
+
 
 #pragma region Get
 

@@ -32,6 +32,27 @@
     <Filter Include="GameObject\Enemy">
       <UniqueIdentifier>{e037e18e-62b8-4bf2-b03a-7ab02c61971f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Scene">
+      <UniqueIdentifier>{931c29d8-34f3-4167-9a43-4874e3e2efe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Scene\SceneState">
+      <UniqueIdentifier>{42aeabb7-ef6a-4684-8f74-dc09620ef3c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameManager">
+      <UniqueIdentifier>{5110f491-2083-420f-b4a2-269886851c4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Scene\SceneState\Title">
+      <UniqueIdentifier>{40165fe7-6497-4d29-84be-9373674e66c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Scene\SceneState\Game">
+      <UniqueIdentifier>{f053069b-7afa-4227-81ce-78bfddb00608}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Scene\SceneState\Result">
+      <UniqueIdentifier>{cdf0ebef-9930-485f-8474-9b57d6abc1be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\BackGround">
+      <UniqueIdentifier>{e113b2fb-e4b2-4344-a17d-d92b805987c7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -64,6 +85,24 @@
     </ClCompile>
     <ClCompile Include="GameObject\Enemy\Enemy.cpp">
       <Filter>GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager\GameManager.cpp">
+      <Filter>GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Scene\SceneState\Title\TitleSceneState.cpp">
+      <Filter>GameObject\Scene\SceneState\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Scene\SceneState\Result\ResultSceneState.cpp">
+      <Filter>GameObject\Scene\SceneState\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Scene\SceneState\Game\GameSceneState.cpp">
+      <Filter>GameObject\Scene\SceneState\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\BackGround\BackGround.cpp">
+      <Filter>GameObject\BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Scene\IScene.cpp">
+      <Filter>GameObject\Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +185,24 @@
     </ClInclude>
     <ClInclude Include="GameObject\Enemy\Enemy.h">
       <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Scene\IScene.h">
+      <Filter>GameObject\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager\GameManager.h">
+      <Filter>GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Scene\SceneState\Title\TitleSceneState.h">
+      <Filter>GameObject\Scene\SceneState\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Scene\SceneState\Result\ResultSceneState.h">
+      <Filter>GameObject\Scene\SceneState\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Scene\SceneState\Game\GameSceneState.h">
+      <Filter>GameObject\Scene\SceneState\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\BackGround\BackGround.h">
+      <Filter>GameObject\BackGround</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

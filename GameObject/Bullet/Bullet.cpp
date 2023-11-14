@@ -63,3 +63,12 @@ void Bullet::SubtructBulletLife() {
 		isDead_ = true;
 	}
 }
+
+
+
+/// <summary>
+/// 衝突時判定
+/// </summary>
+void Bullet::onCollision() {
+	isDead_ = true;
+}

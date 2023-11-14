@@ -106,9 +106,15 @@
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\TextureManager.cpp" />
     <ClCompile Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.cpp" />
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp" />
+    <ClCompile Include="GameManager\GameManager.cpp" />
+    <ClCompile Include="GameObject\BackGround\BackGround.cpp" />
     <ClCompile Include="GameObject\Bullet\Bullet.cpp" />
     <ClCompile Include="GameObject\Enemy\Enemy.cpp" />
     <ClCompile Include="GameObject\Player\Player.cpp" />
+    <ClCompile Include="GameObject\Scene\IScene.cpp" />
+    <ClCompile Include="GameObject\Scene\SceneState\Game\GameSceneState.cpp" />
+    <ClCompile Include="GameObject\Scene\SceneState\Result\ResultSceneState.cpp" />
+    <ClCompile Include="GameObject\Scene\SceneState\Title\TitleSceneState.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Utility\InputManager\InputManager.cpp" />
   </ItemGroup>
@@ -139,9 +145,15 @@
     <ClInclude Include="C:\KamataEngine\DirectXGame\input\Input.h" />
     <ClInclude Include="C:\KamataEngine\DirectXGame\scene\GameScene.h" />
     <ClInclude Include="C:\KamataEngine\Adapter\Novice.h" />
+    <ClInclude Include="GameManager\GameManager.h" />
+    <ClInclude Include="GameObject\BackGround\BackGround.h" />
     <ClInclude Include="GameObject\Bullet\Bullet.h" />
     <ClInclude Include="GameObject\Enemy\Enemy.h" />
     <ClInclude Include="GameObject\Player\Player.h" />
+    <ClInclude Include="GameObject\Scene\IScene.h" />
+    <ClInclude Include="GameObject\Scene\SceneState\Game\GameSceneState.h" />
+    <ClInclude Include="GameObject\Scene\SceneState\Result\ResultSceneState.h" />
+    <ClInclude Include="GameObject\Scene\SceneState\Title\TitleSceneState.h" />
     <ClInclude Include="Utility\InputManager\InputManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

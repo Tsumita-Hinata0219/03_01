@@ -17,11 +17,12 @@ Player* Player::GetInstance() {
 /// </summary>
 void Player::Initialize() {
 
-	Player::GetInstance()->position_ = { 250.0f, 400 };
+	Player::GetInstance()->position_ = { 250.0f, 400.0f };
 	Player::GetInstance()->velocity_ = { 9.0f, 9.0f };
 	Player::GetInstance()->size_ = 20.0f;
 	Player::GetInstance()->bulVelocity_ = -15.0f;
 }
+
 
 
 /// <summary>
@@ -44,6 +45,7 @@ void Player::Update() {
 	// バレットの削除
 	Player::GetInstance()->DeleteBullet();
 }
+
 
 
 /// <summary>
@@ -122,7 +124,7 @@ void Player::Shot() {
 
 
 /// <summary>
-/// デスフラグの立った球を削除
+/// デスフラグの立った弾を削除
 /// </summary>
 void Player::DeleteBullet() {
 

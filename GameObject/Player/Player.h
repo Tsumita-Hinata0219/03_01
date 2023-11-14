@@ -34,6 +34,11 @@ public:
 	/// </summary>
 	static void Draw();
 
+	/// <summary>
+	/// 弾のリストの取得
+	/// </summary>
+	const std::list<Bullet*>& GetBullet() { return bullets_; };
+
 
 private:
 
@@ -51,6 +56,7 @@ private:
 	/// デスフラグの立った球を削除
 	/// </summary>
 	void DeleteBullet();
+
 
 private:
 
